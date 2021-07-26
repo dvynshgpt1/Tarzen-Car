@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    overflow: hidden;
+    animation: updownbody linear 5s infinite;
+    
+}
+.building{
+    background: url(./building.jpeg) repeat-x;
+    position: absolute;
+    height: 100vh;
+    width: 300vw;
+    background-size: 166vh;
+    top: -30vh;
+    animation: buildingmove linear 5s infinite;
+}
+.track{
+    bottom: -31%;
+    background: url(./track.jpeg) repeat-x;
+    position: absolute;
+    height: 31vh;
+    width: 800vw;
+    background-size: 64vh;
+    animation: trackmove linear 4s infinite;
+}
+.car{
+    background: url(./car.png) no-repeat;
+    position: absolute;
+    height: 23vh;
+    width: 100vw;
+    background-size: 48vh;
+    bottom: -85vh;
+    left: 64vh;
+    animation: updown linear 3s infinite;
+}
+.wheel1 img {
+    width: 3.5vw;
+    height: 3.5vw;
+    position: relative;
+    top: 14.2vh;
+    left: 33.3vh;
+    animation: rotatewheel linear .6s infinite;
+}
+.wheel2 img {
+    width: 3.5vw;
+    height: 3.5vw;
+    position: relative;
+    top: 6.4vh;
+    left: 8.8vh;
+    animation: rotatewheel linear 0.3s infinite;
+}
+
+@keyframes rotatewheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes trackmove{
+    100%{
+        transform: translateX(-300vw);
+    }
+}
+@keyframes buildingmove{
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes updown{
+    0%{
+        transform: translateY(-5px);
+    }
+    33%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes updownbody{
+    0%{
+        transform: translateY(-50px);
+    }
+    33%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+ 
+@media only screen and (max-width:768px){
+    .car{
+        left: 0vh;;
+    }
+    .wheel1 img{
+        width: 14.5vw;
+        height: 14.5vw;
+        position: relative;
+        top: 14.2vh;
+        left: 9vh;
+    }
+    .wheel2 img{
+        width: 14.5vw;
+        height: 14.5vw;
+        position: relative;
+        top: 6.4vh;
+        left: 70vw;
+    }
+}
