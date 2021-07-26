@@ -11,10 +11,10 @@ body{
     background: url(./building.jpeg) repeat-x;
     position: absolute;
     height: 100vh;
-    width: 300vw;
+    width: 800vw;
     background-size: 166vh;
     top: -30vh;
-    animation: buildingmove linear 5s infinite;
+    animation: buildingmove linear 2s infinite;
 }
 .track{
     bottom: -31%;
@@ -31,7 +31,7 @@ body{
     height: 23vh;
     width: 100vw;
     background-size: 48vh;
-    bottom: -85vh;
+    bottom: -84.5vh;
     left: 64vh;
     animation: updown linear 3s infinite;
 }
@@ -60,24 +60,24 @@ body{
 
 @keyframes trackmove{
     100%{
-        transform: translateX(-300vw);
+        transform: translateX(-200vw);
     }
 }
 @keyframes buildingmove{
     100%{
-        transform: translateX(-100vw);
+        transform: translateX(-200vw);
     }
 }
 
 @keyframes updown{
     0%{
-        transform: translateY(-5px);
+        transform: translateY(-3px);
     }
     33%{
-        transform: translateY(5px);
+        transform: translateY(3px);
     }
     100%{
-        transform: translateY(-5px);
+        transform: translateY(-3px);
     }
 }
 @keyframes updownbody{
@@ -107,7 +107,7 @@ body{
         width: 14.5vw;
         height: 14.5vw;
         position: relative;
-        top: 6.4vh;
-        left: 70vw;
+        top: 5.4vh;
+        left: 64.6vw;
     }
 }
