@@ -2,83 +2,10 @@
     margin: 0px;
     padding: 0px;
 }
+
 body{
     overflow: hidden;
     animation: updownbody linear 5s infinite;
-    
-}
-.building{
-    background: url(./building.jpeg) repeat-x;
-    position: absolute;
-    height: 100vh;
-    width: 800vw;
-    background-size: 166vh;
-    top: -30vh;
-    animation: buildingmove linear 2s infinite;
-}
-.track{
-    bottom: -31%;
-    background: url(./track.jpeg) repeat-x;
-    position: absolute;
-    height: 31vh;
-    width: 800vw;
-    background-size: 64vh;
-    animation: trackmove linear 4s infinite;
-}
-.car{
-    background: url(./car.png) no-repeat;
-    position: absolute;
-    height: 23vh;
-    width: 100vw;
-    background-size: 48vh;
-    bottom: -84.5vh;
-    left: 64vh;
-    animation: updown linear 3s infinite;
-}
-.wheel1 img {
-    width: 3.5vw;
-    height: 3.5vw;
-    position: relative;
-    top: 14.2vh;
-    left: 33.3vh;
-    animation: rotatewheel linear .6s infinite;
-}
-.wheel2 img {
-    width: 3.5vw;
-    height: 3.5vw;
-    position: relative;
-    top: 6.4vh;
-    left: 8.8vh;
-    animation: rotatewheel linear 0.3s infinite;
-}
-
-@keyframes rotatewheel{
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes trackmove{
-    100%{
-        transform: translateX(-200vw);
-    }
-}
-@keyframes buildingmove{
-    100%{
-        transform: translateX(-200vw);
-    }
-}
-
-@keyframes updown{
-    0%{
-        transform: translateY(-3px);
-    }
-    33%{
-        transform: translateY(3px);
-    }
-    100%{
-        transform: translateY(-3px);
-    }
 }
 @keyframes updownbody{
     0%{
@@ -91,23 +18,135 @@ body{
         transform: translateY(-50px);
     }
 }
- 
-@media only screen and (max-width:768px){
-    .car{
-        left: 0vh;;
+
+html{
+    height: 100%;
+}
+
+.building{
+    background: url(./building.jpeg) repeat-x;
+    position: absolute;
+    height: 100vh;
+    width: 800vw;
+    background-size: 166vh;
+    top: -30vh;
+    animation: buildingmove linear 3s infinite;
+}
+@keyframes buildingmove{
+    100%{
+        transform: translateX(-200vw);
     }
-    .wheel1 img{
-        width: 14.5vw;
-        height: 14.5vw;
-        position: relative;
-        top: 14.2vh;
-        left: 9vh;
+}
+
+.track{
+    bottom: -31%;
+    background: url(./track.jpeg) repeat-x;
+    position: absolute;
+    height: 31vh;
+    width: 800vw;
+    background-size: 64vh;
+    animation: trackmove linear 1s infinite;
+}
+@keyframes trackmove{
+    100%{
+        transform: translateX(-200vw);
+    }
+}
+
+.car{
+    background: url(./car.png) no-repeat;
+    position: absolute;
+    height: 23vh;
+    width: 100vw;
+    background-size: 48vh;
+    bottom: -84.5vh;
+    left: 64vh;
+    animation: updown linear 3s infinite;
+}
+@keyframes updown{
+    0%{
+        transform: translateY(-3px);
+    }
+    33%{
+        transform: translateY(3px);
+    }
+    100%{
+        transform: translateY(-3px);
+    }
+}
+
+.wheel1 img {
+    width: 3.5vw;
+    height: 3.5vw;
+    position: relative;
+    top: 14.2vh;
+    left: 33.3vh;
+    animation: rotatewheel linear .4s infinite;
+}
+.wheel2 img {
+    width: 3.5vw;
+    height: 3.5vw;
+    position: relative;
+    top: 6.4vh;
+    left: 8.8vh;
+    animation: rotatewheel linear 0.4s infinite;
+}
+@keyframes rotatewheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px){
+ .car{
+     left: 20vh;
+ }
+ .wheel1 img {
+    height: 7vh;
+    width: 7vh;
+    top: 14.3vh;
+    left: 9vh;
+ }
+ .wheel2 img{
+    height: 7vh;
+    width: 7vh;
+    top: 6.7vh;
+    left: 33.4vh;
+}
+}
+
+@media (min-width:769px) and (max-width:2000px){
+    .car{
+        left: 6vh;
+    }
+    .wheel1 img {
+       height: 7vh;
+       width: 7vh;
+       top: 14.3vh;
+       left: 9vh;
     }
     .wheel2 img{
-        width: 14.5vw;
-        height: 14.5vw;
-        position: relative;
-        top: 5.4vh;
-        left: 64.6vw;
+       height: 7vh;
+       width: 7vh;
+       top: 6.7vh;
+       left: 33.4vh;
+    }
+} 
+
+@media (min-width:170px) and (max-width:520px){
+    .car{
+        left: 6vh;
+    }
+    .wheel1 img {
+       height: 7vh;
+       width: 7vh;
+       top: 14.3vh;
+       left: 9vh;
+    }
+    .wheel2 img{
+       height: 7vh;
+       width: 7vh;
+       top: 6.7vh;
+       left: 33.4vh;
     }
 }
