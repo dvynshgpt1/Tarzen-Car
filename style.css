@@ -30,7 +30,7 @@ html{
     width: 800vw;
     background-size: 166vh;
     top: -30vh;
-    animation: buildingmove linear 3s infinite;
+    animation: buildingmove linear 2s infinite;
 }
 @keyframes buildingmove{
     100%{
@@ -59,8 +59,8 @@ html{
     height: 23vh;
     width: 100vw;
     background-size: 48vh;
-    bottom: -84.5vh;
-    left: 64vh;
+    bottom: -85.5vh;
+    left: 78vh;
     animation: updown linear 3s infinite;
 }
 @keyframes updown{
@@ -79,16 +79,17 @@ html{
     width: 3.5vw;
     height: 3.5vw;
     position: relative;
-    top: 14.2vh;
+    top: 14.1vh;
     left: 33.3vh;
     animation: rotatewheel linear .4s infinite;
+    
 }
 .wheel2 img {
     width: 3.5vw;
     height: 3.5vw;
     position: relative;
-    top: 6.4vh;
-    left: 8.8vh;
+    top: 6.3vh;
+    left: 9vh;
     animation: rotatewheel linear 0.4s infinite;
 }
 @keyframes rotatewheel{
@@ -115,9 +116,9 @@ html{
 }
 }
 
-@media (min-width:769px) and (max-width:2000px){
+@media (min-width:769px) and (max-width:1279px){
     .car{
-        left: 6vh;
+        left: 28vh;
     }
     .wheel1 img {
        height: 7vh;
@@ -135,18 +136,20 @@ html{
 
 @media (min-width:170px) and (max-width:520px){
     .car{
-        left: 6vh;
+        left: 1vh;
+        background-size:36vh;
+        bottom: -90.5vh;
     }
     .wheel1 img {
-       height: 7vh;
-       width: 7vh;
-       top: 14.3vh;
-       left: 9vh;
+        height: 5.5vh;
+        width: 5.5vh;
+        top: 10.7vh;
+        left: 6.6vh;
     }
     .wheel2 img{
-       height: 7vh;
-       width: 7vh;
-       top: 6.7vh;
-       left: 33.4vh;
+        height: 5.5vh;
+        width: 5.5vh;
+        top: 4.5vh;
+        left: 25vh;
     }
 }
